@@ -41,10 +41,11 @@ class TestCase;
   endfunction
 
 
-  function void add_failure(string message);
+  function void add_failure(string message, string debug_msg);
     failure = new("failure");
     failure.set_attribute("message", message);
     failure.set_attribute("type", "failure");
+    failure.set_attribute("debug_msg", debug_msg);
   endfunction
 
 

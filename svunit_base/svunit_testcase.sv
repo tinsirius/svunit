@@ -243,7 +243,7 @@ function bit svunit_testcase::fail(string c, logic b, string s, string f, int l,
     if (d != "") begin
       $sformat(_d, "[ %s ] ", d);
     end
-    current_junit_test_case.add_failure($sformatf("%s: %s %s(at %s line:%0d)",c,s,_d,f,l));
+    current_junit_test_case.add_failure($sformatf("%s: %s %s(at %s line:%0d)",c,s,_d,f,l), _d);
     `ERROR($sformatf("%s: %s %s(at %s line:%0d)",c,s,_d,f,l));
     return 1;
   end
